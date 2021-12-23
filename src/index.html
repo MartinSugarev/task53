@@ -55,12 +55,16 @@
       //console.log(products[0].querySelector(".media-content").querySelectorAll("p")[1].textContent);
       
      // let price = document.getElementsByClassName("subtitle is-6 price");
-      products.forEach(el, index => {
-       let price = el.querySelector(".media-content").querySelectorAll("p")[1].textContent;
-       console.log(price);
+     for(let i = 0; i < products.length; i++){
+      let price = products[i].querySelector(".media-content").querySelectorAll("p")[1].textContent;
+      products[i].setAttribute("data-price", price)
+     }
+     // products.forEach(el, index => {
+       //let price = el.querySelector(".media-content").querySelectorAll("p")[1].textContent;
+       //console.log(price);
        
-       element.setAttribute("data-price", price)
-      });
+       //element.setAttribute("data-price", price)
+      //});
     </script>
 
   </body>
