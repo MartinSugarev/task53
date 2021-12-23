@@ -50,13 +50,16 @@
     <script>
       let body = document.body
       let products = body.querySelectorAll(".main > div")
-      let price = body.querySelector(".main").querySelector(".media-content").querySelectorAll("p")[1].textContent;
+     // let price = body.querySelector(".main").querySelectorAll(".media-content")//.querySelectorAll("p")[1].textContent;
       //let c = w.querySelector(".card product");
-      //console.log(products);
+      //console.log(products[0].querySelector(".media-content").querySelectorAll("p")[1].textContent);
       
      // let price = document.getElementsByClassName("subtitle is-6 price");
-      products.forEach(element, index => {
-        element.setAttribute("data-price", price)
+      products.forEach(el, index => {
+       let price = el.querySelector(".media-content").querySelectorAll("p")[1].textContent;
+       console.log(price);
+       
+       element.setAttribute("data-price", price)
       });
     </script>
 
