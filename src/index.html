@@ -48,10 +48,15 @@
     </div>
 
     <script>
-      let product = document.getElementsByClassName("card product");
-      let price = document.getElementsByClassName("subtitle is-6 price");
-      product.forEach(element, index => {
-        element.setAttribute("data-price", price[index].textContent)
+      let body = document.body
+      let products = body.querySelectorAll(".main > div")
+      let price = body.querySelector(".main").querySelector(".media-content").querySelectorAll("p")[1].textContent;
+      //let c = w.querySelector(".card product");
+      //console.log(products);
+      
+     // let price = document.getElementsByClassName("subtitle is-6 price");
+      products.forEach(element, index => {
+        element.setAttribute("data-price", price)
       });
     </script>
 
