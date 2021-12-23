@@ -46,5 +46,14 @@
         </div>
       </div>
     </div>
+
+    <script>
+      let product = document.getElementsByClassName("card product");
+      let price = document.getElementsByClassName("subtitle is-6 price");
+      product.forEach(element, index => {
+        element.setAttribute("data-price", price[index].textContent)
+      });
+    </script>
+
   </body>
 </html>
